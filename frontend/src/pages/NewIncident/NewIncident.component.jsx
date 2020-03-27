@@ -16,16 +16,16 @@ export default function NewIncident() {
   const handleNewIncident = async (e) => {
     e.preventDefault();
     const data = { title, value, description }
-    await api.post('incident', data, {
-      headers: {
-        Authorization: ongId,
-      }
-    });
-    setDesc('');
-    setValue('');
-    setTitle('');
-    try {
 
+    try {
+      await api.post('incident', data, {
+        headers: {
+          Authorization: ongId,
+        }
+      });
+      setDesc('');
+      setValue('');
+      setTitle('');
     } catch (error) {
       alert('ERRO AO CADASTRAR CASO, TENTE NOVAMENTE');
     }

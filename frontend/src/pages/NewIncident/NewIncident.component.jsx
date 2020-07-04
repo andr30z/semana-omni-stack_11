@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import './NewIncident.styles.css';
 import { Link } from 'react-router-dom';
+
 import { FiArrowLeft } from 'react-icons/fi';
+
 import logoImg from '../../assets/logo.svg';
 import api from '../../services/api';
 
+import './NewIncident.styles.css';
 
 //
 export default function NewIncident() {
@@ -31,6 +33,7 @@ export default function NewIncident() {
     }
 
   }
+  
   return (
     <div className="newincident-container">
       <div className="content">
